@@ -64,7 +64,7 @@ void sums_and_squares1(int N){
         t1 += i;
     }
 
-    // t1 is the sum of squares from 1 - N
+    // t2 is the sum of squares from 1 - N
     //  for loop and square the curr number and add to t2
     for (int i = 0; i <= N; i++) {
         t2 += i * i;
@@ -79,8 +79,29 @@ void sums_and_squares1(int N){
 void sums_and_squares2(int N){
     char *l1;
     char *l2;
+    t1 = 0 ; t2 = 0;
 
     // YOUR CODE HERE ...
+        // t1 is the sums of 1 - N
+    //  for loop and add curr number to t1
+    for (int i = 0; i <= N; i++) {
+        t1 += i;
+    }
+
+    // t2 is the sum of squares from 1 - N
+    //  for loop and square the curr number and add to t2
+    for (int i = 0; i <= N; i++) {
+        t2 += i * i;
+    }
+
+    // printf method
+    // printf("sum:  %d\n", t1);
+    // printf("sum of squares:  %d", t2);
+
+    // provided functions methods
+    l1 = "sum:  ";
+    l2 = "sum of squares:  ";
+    print_str(l1); print_int(t1); print_newl(); print_str(l2); print_int(t2);
 }
 
 /******************************************************************************
