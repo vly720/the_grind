@@ -41,7 +41,12 @@ int dealer_deck_count = 0;
  * 1.1
  *****************************************************************************/
 void count(int N){
-    // YOUR CODE HERE ...
+    if (N > 0) {
+        for (int i = 1; i <= N; i++) {
+            print_int(i);
+            print_newl();
+        }
+    }
 }
 
 /******************************************************************************
@@ -51,6 +56,19 @@ void sums_and_squares1(int N){
     t1 = 0 ; t2 = 0;
 
     // YOUR CODE HERE ...
+    // reuse prev method to print 1 - N
+    count(N);
+    // t1 is the sums of 1 - N
+    //  for loop and add curr number to t1
+    for (int i = 0; i <= N; i++) {
+        t1 += i;
+    }
+
+    // t1 is the sum of squares from 1 - N
+    //  for loop and square the curr number and add to t2
+    for (int i = 0; i <= N; i++) {
+        t2 += i * i;
+    }
 
     print_int(t1); print_int(t2); print_newl();
 }
